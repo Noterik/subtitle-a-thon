@@ -1,0 +1,270 @@
+.profileimage {
+  height: 168px;
+  width: 168px;
+  background-color: #E2E1E0;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user {
+    width: 100px;
+    height: 120px;
+    color: #3B236A;
+}
+
+.usernameblock {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.username {
+    font-family: Montserrat;
+    font-weight: bold;
+}
+
+.text {
+    font-family: Montserrat;
+    color: #5D5D5D;
+    margin: 0 5vw;
+    padding: 6px 12px;
+}
+
+.uservalue {
+    font-family: Montserrat;
+    color: #5D5D5D;
+    margin: 0 5vw;
+    padding: 8px;
+    background: #E2E1E0 0% 0% no-repeat padding-box;
+    border-radius: 19px;
+}
+
+.button {
+    color: #fff;
+    background: #3C1981 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 6px #AEAEAE29;
+    border-top-left-radius: 27px 100%;
+    border-bottom-left-radius: 27px 100%;
+    border-top-right-radius: 27px 100%;
+    border-bottom-right-radius: 27px 100%;
+    display: inline-block;
+    font: normal normal bold 14px/21px Poppins;
+    letter-spacing: 0px;
+    padding: 12px 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  .navtabs {
+    font-family: Montserrat;
+    color: #E2E1E0;
+  }
+
+  .activetab {
+    color: #3B236A !important;
+    font-weight: bold;
+    background: #F7F7F7 0% 0% no-repeat padding-box;
+    border-radius: 27px 27px 0 0;
+  }
+
+  .tabsbackground {
+    display: flex;
+    background: #F7F7F7 0% 0% no-repeat padding-box;
+  }
+
+  .loadingIcon {
+      padding: 20px;
+  }
+
+  .gridwrapper {
+      padding: 20px;
+  }
+
+  .griditem {
+    flex: 1;
+    background-color: #3B236A;
+    background: url('/event-boarding.png');
+    height: 255px;
+    display: flex;
+    align-items: flex-end;
+    margin: 1rem;
+    float: left;
+    cursor: pointer;
+  }
+
+  .eventimagesoldiers {
+    background-image: url('/event-soldiers.jpg');
+  }
+  
+  .eventimageboarding {
+    background-image: url('/event-boarding.png');
+  }
+  
+  .eventimagemeeting {
+    background-image: url('/about-subtitleathon.jpeg');
+  }
+  
+  .eventimagebeach {
+    background-image: url('/event-beach.jpg');
+  }
+  
+  .griditemfindout {
+    flex: 1;
+    background: none #3B236A;
+    height: 255px;
+    margin: 0.5rem;
+    color: #fff;
+    font: normal normal normal 18px/22px Montserrat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .gridcontentwrapper {
+    width: 100%;
+    padding: 10px 0;
+    box-shadow: 0px 3px 14px #00000029;
+    opacity: 1;
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    display: flex;
+  }
+  
+  .evendateblock {
+    background: #3B236A 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 14px #00000029;
+    border-radius: 8px;
+    text-align: center;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    bottom: 10%;
+    position: relative;
+    left: 5%;
+    padding: 15px;
+  }
+  
+  .eventdateblockdates {
+    font: normal normal normal 24px/29px Norwester;
+  }
+  
+  .evendateblockline {
+    border-color: #fff;
+    margin: 0.4rem 0;
+  }
+  
+  .eventdateblockmonth {
+    font: normal normal normal 20px/24px Norwester;
+  }
+  
+  .eventdescriptionblock {
+    position: relative;
+    width: 70%;
+    left: 10%;
+    color: #fff;
+  }
+  
+  .eventtitle {
+    font: normal normal bold 15px/20px Montserrat;
+    letter-spacing: 0.47px;
+  }
+  
+  .eventdescription {
+    font: normal normal normal 12px/13px Helvetica Neue;
+    letter-spacing: 0.37px;
+  }
+
+  .registrationwrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+  }
+
+  .registration {
+    width: 100%;
+  }
+
+  .videocard {
+    padding: 1vh 0.5vw 3vh 0.5vw;
+}
+
+.videocardinner {
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  height: 100%;
+  padding: 2.5%;
+}
+
+.videoinner {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.videoimage {
+    max-height: 200px;
+    object-fit: contain;
+}
+
+.videotitle {
+    font-family: Montserrat;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.videodescription {
+    font-family: Montserrat;
+    font-size: 14px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.submitbutton {
+  color: #fff;
+  background: #3C1981 0% 0% no-repeat padding-box;
+  box-shadow: 0px 0px 6px #AEAEAE29;
+  border-top-left-radius: 40px 100%;
+  border-bottom-left-radius: 40px 100%;
+  border-top-right-radius: 40px 100%;
+  border-bottom-right-radius: 40px 100%;
+  display: inline-block;
+  font: normal normal bold 14px/21px Poppins;
+  letter-spacing: 0px;
+  padding: 6px 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.characterslabel {
+  position: absolute;
+  top: 1.75em;
+  right: 1.75em;
+  background: #3B236A 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 7px;
+  color: #FFFFFF;
+  font: normal normal bold 10px/22px Montserrat;
+  letter-spacing: 0.31px;
+  padding: 0.5em;
+}
+
+.reviewedlabel {
+  position: absolute;
+  top: 1.75em;
+  left: 1.75em;
+  background: rgb(192, 4, 4) 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 7px;
+  color: #FFFFFF;
+  font: normal normal bold 10px/22px Montserrat;
+  letter-spacing: 0.31px;
+  padding: 0.5em;
+}
+
+.downloadsubtitles:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}

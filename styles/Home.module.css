@@ -1,122 +1,218 @@
-.container {
-  min-height: 100vh;
-  padding: 0 0.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.header {
+    width: 100%;
+    background-image: url('/header-background.png');
+    background-position-y: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    justify-content: center;
+    display: flex;
 }
 
-.main {
-  padding: 5rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.headerlogo {
+  max-height: 40vh;
+  object-fit: contain;
+  max-width: 100%;
 }
 
-.footer {
-  width: 100%;
-  height: 100px;
-  border-top: 1px solid #eaeaea;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.welcomeheader {
+  color: #5D5D5D;
+  font: normal normal normal 27px/33px Montserrat;
+  letter-spacing: 0px;
 }
 
-.footer img {
-  margin-left: 0.5rem;
+.welcometext {
+  color: #5D5D5D;
+  font: normal normal normal 16px/25px Montserrat;
+  letter-spacing: 0.5px;
 }
 
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.button {
+  color: #fff;
+  background: #3C1981 0% 0% no-repeat padding-box;
+  box-shadow: 0px 0px 6px #AEAEAE29;
+  border-top-left-radius: 27px 100%;
+  border-bottom-left-radius: 27px 100%;
+  border-top-right-radius: 27px 100%;
+  border-bottom-right-radius: 27px 100%;
+  display: inline-block;
+  font: normal normal bold 14px/21px Poppins;
+  letter-spacing: 0px;
+  padding: 12px 20px;
+  text-transform: uppercase;
 }
 
-.title a {
-  color: #0070f3;
-  text-decoration: none;
+.statisticsblock {
+  background: #3C1981 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 14px #00000029;
+  padding: 3vh;
+  border-radius: 12px;
 }
 
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
-}
-
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
-}
-
-.title,
-.description {
+.statisticsnumber {
+  color: #fff;
+  font: normal normal normal 34px/41px Norwester;
+  letter-spacing: 0px;
   text-align: center;
 }
 
-.description {
-  line-height: 1.5;
-  font-size: 1.5rem;
+.statisticsdesc {
+  text-align: center;
+  font: normal normal 300 18px/20px Montserrat;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  text-transform: uppercase;
 }
 
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
+.aboutheader {
+  font: normal normal normal 30px/37px Montserrat;
+  letter-spacing: 0px;
+  color: #000000;
 }
 
-.grid {
+.aboutparticipate {
+  background: #F7F7F7 0% 0% no-repeat padding-box;
+  box-shadow: 0px 0px 6px #AEAEAE29;
+  padding: .5rem 2.5rem;
+  border-top-left-radius: 66px;
+  border-bottom-left-radius: 66px;
+  border-top-right-radius: 800px 50%;
+  border-bottom-right-radius: 300px 40%;
+}
+
+.personspeaking {
+  max-width: 40%;
+  margin-left: 50%;
+}
+
+.link {
+  font: normal normal bold 16px/25px Montserrat;
+  letter-spacing: 0.5px;
+  color: #5D5D5D;
+  font-weight: bold;
+}
+
+.eventheader {
+  font: normal normal normal 40px/49px Montserrat;
+  letter-spacing: 0px;
+  color: #000000;
+}
+
+.griditem {
+  background-color: #3B236A;
+  background-size: cover;
+  height: 255px;
+  margin: 0.5rem;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
+  padding-bottom: 15px;
+  width: 365px
+}
+
+.eventimagesoldiers {
+  background-image: url('/event-soldiers.jpg');
+}
+
+.eventimageboarding {
+  background-image: url('/event-boarding.png');
+}
+
+.eventimagemeeting {
+  background-image: url('/about-subtitleathon.jpeg');
+}
+
+.eventimagebeach {
+  background-image: url('/event-beach.jpg');
+}
+
+.griditemfindout {
+  background: none #3B236A;
+  height: 255px;
+  margin: 0.5rem;
+  color: #fff;
+  font: normal normal normal 18px/22px Montserrat;
+  display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
-  margin-top: 3rem;
+  align-items: center;
+  width: 370px;
 }
 
-.card {
-  margin: 1rem;
-  flex-basis: 45%;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
+.gridcontentwrapper {
+  width: 100%;
+  padding: 10px 0;
+  box-shadow: 0px 3px 14px #00000029;
+  opacity: 1;
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  display: flex;
 }
 
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+.evendateblock {
+  background: #3B236A 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 14px #00000029;
+  border-radius: 8px;
+  text-align: center;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  bottom: 10%;
+  position: relative;
+  left: 5%;
+  padding: 15px;
 }
 
-.card h3 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
+.eventdateblockdates {
+  font: normal normal normal 24px/29px Norwester;
 }
 
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
+.evendateblockline {
+  border-color: #fff;
+  margin: 0.4rem 0;
 }
 
-.logo {
-  height: 1em;
+.eventdateblockmonth {
+  font: normal normal normal 20px/24px Norwester;
 }
 
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
+.eventdescriptionblock {
+  position: relative;
+  width: 70%;
+  left: 10%;
+  color: #fff;
+}
+
+.eventtitle {
+  font: normal normal bold 15px/20px Montserrat;
+  letter-spacing: 0.47px;
+}
+
+.eventdescription {
+  font: normal normal normal 12px/13px Helvetica Neue;
+  letter-spacing: 0.37px;
+}
+
+.eventreadmore {
+  font: normal normal bold 9px/13px Poppins;
+  color: #fff;
+  background: #3C1981 0% 0% no-repeat padding-box;
+  box-shadow: 0px 0px 6px #AEAEAE29;
+  border-top-left-radius: 17px 100%;
+  border-bottom-left-radius: 17px 100%;
+  border-top-right-radius: 17px 100%;
+  border-bottom-right-radius: 17px 100%;
+  display: inline-block;  
+  padding: 8px 12px;
+  text-transform: uppercase;
+  right: 20px;
+  bottom: -5px;
+  position: absolute;
+}
+
+.awardsImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-shadow: 0px 3px 6px #00000029;
+}
+
+.test {
+  height: calc(100vh - 66px);
 }

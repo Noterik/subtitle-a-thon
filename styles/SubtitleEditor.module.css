@@ -1,0 +1,26 @@
+.header {
+    color: #030303;
+    text-align: center;
+    font-family: 'Norwester', sans-serif;
+    font-size: 45px;       
+    letter-spacing: 1.4px;                   
+}
+
+.subheader {
+    color: #3B236A;
+    text-align: center;
+    font-family: 'Norwester', sans-serif;
+    font-size: 35px;
+}
+
+.eventheader {
+    font: normal normal bold 30px/25px Montserrat;
+    letter-spacing: 0.93px;
+    color: #000000;
+}
+
+.text {
+    color: #5D5D5D;
+    font: normal normal normal 16px/25px Montserrat;
+    letter-spacing: 0.5px;
+}

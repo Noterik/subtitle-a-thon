@@ -1,0 +1,116 @@
+.header {
+    color: #030303;
+    text-align: center;
+    font-family: 'Norwester', sans-serif;
+    font-size: 45px;       
+    letter-spacing: 1.4px;                   
+}
+
+.subheader {
+    color: #3B236A;
+    text-align: center;
+    font-family: 'Norwester', sans-serif;
+    font-size: 35px;
+}
+
+.eventheader {
+    font: normal normal bold 30px/25px Montserrat;
+    letter-spacing: 0.93px;
+    color: #fff;
+}
+
+.text {
+    color: #fff;
+    font: normal normal normal 16px/25px Montserrat;
+    letter-spacing: 0.5px;
+}
+
+.button {
+    color: #3C1981;
+    background: #fff 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 6px #AEAEAE29;
+    border-top-left-radius: 27px 100%;
+    border-bottom-left-radius: 27px 100%;
+    border-top-right-radius: 27px 100%;
+    border-bottom-right-radius: 27px 100%;
+    display: inline-block;
+    font: normal normal bold 14px/21px Poppins;
+    letter-spacing: 0px;
+    padding: 12px 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.eventrowbackground {
+  background: #3B236A 0% 0% no-repeat padding-box;
+}
+
+.eventimageodd {
+  height: 100%;
+  background-size: cover;
+  display: flex;
+  flex-direction: column-reverse;
+  margin-right: -15px;
+  margin-left: -30px;
+}
+
+.eventimagesoldiers {
+  background-image: url('/event-soldiers.jpg');
+}
+
+.eventimageboarding {
+  background-image: url('/event-boarding.png');
+}
+
+.eventimagemeeting {
+  background-image: url('/about-subtitleathon.jpeg');
+}
+
+.eventimagebeach {
+  background-image: url('/event-beach.jpg');
+}
+
+.eventimageeven {    
+    height: 100%;
+    background-size: cover;
+    display: flex;
+    flex-direction: column-reverse;
+    margin-left: -30px;
+  }
+
+.eventimagedatewrapper {
+    width: 100%;
+    opacity: 1;
+    display: flex;
+    align-items:flex-end;
+  }
+
+.evendateblock {
+    background: #3B236A 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 14px #00000029;
+    border-radius: 8px;
+    text-align: center;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    bottom: 20%;
+    position: relative;
+    left: 5%;
+    padding: 15px;
+}
+
+.evendateblockright {
+    margin-right: 10%;
+}
+  
+  .eventdateblockdates {
+    font: normal normal normal 24px/29px Norwester;
+  }
+  
+  .evendateblockline {
+    border-color: #fff;
+    margin: 0.4rem 0;
+  }
+  
+  .eventdateblockmonth {
+    font: normal normal normal 20px/24px Norwester;
+  }

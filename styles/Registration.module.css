@@ -1,0 +1,178 @@
+.leftbackground {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 58.333333%;
+    height: 100%;
+    background-color: #c0c0c0;
+    z-index: -1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url('/background/login-left.png');  
+    background-size: cover;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.purple {
+    color: #373173;
+}
+
+.titletext {
+    font-family: Montserrat;
+    font-weight: bold;
+}
+
+.rightbackground {
+    top: 0;
+    right: 0;
+    position: absolute;
+    width: 41.666667%;
+    height: 100%;
+    z-index: -1;
+}
+
+.header {
+    font-family: Montserrat;
+    font-size: 4vh;
+    font-weight: bold;
+    color: #373173;
+    text-align: center;
+}
+
+.subheader {
+    font-family: Montserrat;
+    text-align: center;
+}
+
+.registrationtext {
+    font: normal normal normal 16px/25px Montserrat;
+    letter-spacing: 0.5px;
+    color: #5D5D5D;
+}
+
+.link {
+    font-family: Montserrat;
+    font-weight: bold;
+    color: #373173;
+}
+
+.link2 {
+    font-family: Montserrat;
+    color: #373173;
+}
+
+.registerFieldName {
+    display: inline-block;
+    margin: 0 0 0.25em 0;
+    font-family: Montserrat;
+}
+
+.registerFieldNameMargin {
+    margin-top: 1.5em;
+}
+
+.submitbutton {
+    width: 100%;
+    color: #fff;
+    background: #373173 0% 0% no-repeat padding-box;
+    margin-top: 1em;
+    border-radius: 8px;
+    font-family: Poppins;
+    font-weight: bold;
+    padding: 14px 0;
+    text-transform: uppercase;
+}
+
+.submitbutton:disabled {
+    background: #a0a0a0;
+}
+
+.invalidinput {
+    font-family: Montserrat;
+    color: red;
+}
+
+.message {
+    margin-top: 0.25rem;
+}
+
+.message > p {
+    margin-bottom: 0;
+}
+
+.formInput {
+    font-family: Montserrat;
+    display: block;
+    width: 100%;
+    border: 1px solid #C4C4C4;
+    border-radius: 8px;
+    padding: 8px;
+    background-color: #fff;
+}
+
+.formCheckbox {
+    border: 1px solid #C4C4C4;
+    border-radius: 2px;
+    zoom: 1.5;
+}
+
+.passwordwrapper {
+    position: relative;
+    display: flex;
+}
+
+.eye {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    width: 15px;
+    height: 15px;
+    color: #373173;
+}
+.eye:hover {
+    cursor: pointer;
+}
+
+.termwrapper {
+    display: block;
+    padding-right: 10px;
+}
+
+.termwrapper input {
+    vertical-align: middle;
+    margin-right: 0.5em;
+}
+
+.termwrapper label span {
+    vertical-align: middle;
+    font-family: Montserrat;
+}
+
+.registration-success {
+    font-family: Montserrat;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+@media screen and (max-width: 992px) {
+    .leftbackground {
+        display: none;
+    }
+
+    .rightbackground {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    .hiddenColumn {
+        display: none;
+    }
+}

@@ -1,0 +1,23 @@
+.footer {
+    width: 100%;
+    background-color: #FDFDFD;
+    box-shadow: 0px 3px 6px #00000029;
+}
+
+.footerimage {
+    max-height: 60px;
+}
+
+.footertext {
+    font-family: Montserrat;
+    font-size: 15px;
+    color: #5d5d5d;
+    padding-bottom: 10px;
+}
+
+.footerlink {
+    font-size: 15px;
+    font-family: Montserrat;
+    font-weight: bold;
+    color: #000;
+}

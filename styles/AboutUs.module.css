@@ -1,0 +1,54 @@
+.header {
+    color: #030303;
+    text-align: center;
+    font-family: 'Norwester', sans-serif;
+    font-size: 45px;       
+    letter-spacing: 1.4px;                   
+}
+
+.subheader {
+    color: #3B236A;
+    text-align: center;
+    font-family: 'Norwester', sans-serif;
+    font-size: 35px;
+}
+
+.text {
+    color: #5D5D5D;
+    font: normal normal normal 16px/25px Montserrat;
+    letter-spacing: 0.5px;
+}
+
+.link {
+    font: normal normal bold 16px/25px Montserrat;
+    letter-spacing: 0.5px;
+    color: #5D5D5D;
+    font-weight: bold;
+  }
+
+  .partnersheader {
+    font: normal normal normal 30px/25px Montserrat;
+    letter-spacing: 0.93px;
+    color: #5D5D5D;
+  }
+
+  .partnerwrapper {
+    float: left;
+    width: 150px;
+    text-align: center;
+    font-size: 12px;
+    margin-bottom: 2rem;
+    margin-right: 2em; 
+  }
+
+  .partner {
+    width: 150px;
+    height: 150px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    padding: 10px;
+  }
+
+  .link {
+      color: #5D5D5D;
+  }

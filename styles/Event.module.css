@@ -1,0 +1,338 @@
+.header {
+    color: #030303;
+    text-align: center;
+    font-family: 'Norwester', sans-serif;
+    font-size: 45px;       
+    letter-spacing: 1.4px;                   
+}
+
+.subheader {
+    color: #3B236A;
+    text-align: center;
+    font-family: 'Norwester', sans-serif;
+    font-size: 35px;
+}
+
+.blackSubHeader {
+    color: #000;
+    text-align: center;
+    font-family: 'Norwester', sans-serif;
+    font-size: 35px;
+    margin-top: 10vh;
+    margin-bottom: 6vh;
+}
+
+.text {
+    color: #000;
+    font: normal normal normal 16px/25px Montserrat;
+    letter-spacing: 0.5px;
+}
+
+.purplebackground {
+    background-color: #3B236A;
+}
+
+.eventheader {
+    font: normal normal bold 30px/25px Montserrat;
+    letter-spacing: 0.93px;
+    color: #fff;
+}
+
+.eventheaderblack {
+    font-family: Montserrat;
+    font-size: 30px;
+    color: #000;
+    margin-bottom: 4vh;
+}
+
+.whitetext {
+    color: #fff;
+    font-size: 15px;
+}
+
+.button {
+    color: #3C1981;
+    background: #fff 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 6px #AEAEAE29;
+    border-top-left-radius: 27px 100%;
+    border-bottom-left-radius: 27px 100%;
+    border-top-right-radius: 27px 100%;
+    border-bottom-right-radius: 27px 100%;
+    display: inline-block;
+    font: normal normal bold 14px/21px Poppins;
+    letter-spacing: 0px;
+    padding: 12px 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.eventimageodd {
+    background: url('/event-soldiers.jpg');
+    height: 100%;
+    background-size: cover;
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 0 -15px;
+}
+
+.eventimageeven {
+    background: url('/event-boarding.png');
+    height: 100%;
+    background-size: cover;
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 0 -15px;
+}
+
+.eventimagewinners {
+    background: url('/winners.jpg');
+    height: 100%;
+    background-size: contain;
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 0 -15px;
+    background-position: center;
+}
+
+.eventimagedatewrapper {
+    width: 100%;
+    opacity: 1;
+    display: flex;
+    align-items:flex-end;
+}
+
+.evendateblock {
+    background: #3B236A 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 14px #00000029;
+    border-radius: 8px;
+    text-align: center;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    bottom: 20%;
+    position: relative;
+    left: 5%;
+    padding: 15px;
+}
+
+.evendateblockleft {
+    margin-left: 0;
+}
+
+.evendateblockright {
+    margin-right: 10%;
+}
+  
+.eventdateblockdates {
+    font: normal normal normal 24px/29px Norwester;
+}
+  
+.evendateblockline {
+    border-color: #fff;
+    margin: 0.4rem 0;
+}
+  
+.eventdateblockmonth {
+    font: normal normal normal 20px/24px Norwester;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.partnerwrapper {
+    float: left;
+    width: 150px;
+    text-align: center;
+    font-size: 12px;
+    margin-bottom: 2rem;
+    margin-right: 2em; 
+}
+
+.partner {
+    width: 150px;
+    height: 150px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    padding: 10px;
+}
+
+.link {
+      color: #5D5D5D;
+}
+
+.loadingIcon {
+    padding: 20px;
+    text-align: center;
+}
+
+.videocard {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    margin-left: 1vw;
+    margin-bottom: 4vh;
+}
+
+.videoinner {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.videoimage {
+    max-height: 200px;
+    object-fit: contain;
+    width: 100%;
+}
+
+.videotitle {
+    font-family: Montserrat;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.videodescription {
+    font-family: Montserrat;
+    font-size: 14px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.submitbutton {
+    color: #fff;
+    background: #3C1981 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 6px #AEAEAE29;
+    border-top-left-radius: 40px 100%;
+    border-bottom-left-radius: 40px 100%;
+    border-top-right-radius: 40px 100%;
+    border-bottom-right-radius: 40px 100%;
+    display: inline-block;
+    font: normal normal bold 14px/21px Poppins;
+    letter-spacing: 0px;
+    padding: 6px 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.submitbutton:disabled {
+    background-color: #a0a0a0;
+}
+
+.progressheader {
+    text-align: center;
+    font: normal normal normal 30px/36px Norwester;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+}
+
+.progressblock {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 14px #00000029;
+    border-radius: 13px;
+}
+
+.statisticsnumber {
+    color: #fff;
+    font: normal normal normal 34px/41px Norwester;
+    letter-spacing: 0px;
+    text-align: center;
+    color: #3B236A;
+}
+  
+.statisticsdesc {
+    text-align: center;
+    font: normal normal 300 14px/20px Montserrat;
+    letter-spacing: 0px;
+    color: #3B236A;
+    text-transform: uppercase;
+}
+
+.leaderboardheader {
+    text-align: center;
+    font: normal normal normal 30px/36px Norwester;
+    letter-spacing: 0px;
+    color: #000000;
+}
+
+.leaderboardnumber {
+    text-align: center;
+    font: normal normal normal 25px/30px Norwester;
+    letter-spacing: 0px;
+    color: #000000;
+}
+
+.leaderboardparticipant {
+    text-align: left;
+    font: normal normal bold 16px/30px Montserrat;
+    letter-spacing: 0.46px;
+    color: #5D5D5D;
+}
+
+.leaderboardparticipantnumber {
+    font: normal normal bold 20px/25px Helvetica Neue;
+    letter-spacing: 0px;
+    color: #843D95;
+}
+
+.leaderboardparticipantcharacters {
+    font: normal normal normal 20px/24px Helvetica Neue;
+    letter-spacing: 0px;
+    color: #E2E1E0;
+}
+
+.videoheader {
+    text-align: center;
+    font: normal normal normal 40px/48px Norwester;
+    letter-spacing: 0px;
+    color: #3B236A;
+}
+
+.languagelabel {
+    position: absolute;
+    top: -1em;
+    right: -0.5em;
+    background: #3B236A 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 7px;
+    color: #FFFFFF;
+    font: normal normal bold 10px/22px Montserrat;
+    letter-spacing: 0.31px;
+    padding: 0.5em;
+}
+
+.flexfill {
+    flex-grow: 1;
+}
+
+.imagecontainer {
+    position: relative;
+    width: 100%;
+}
+
+.overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0.9;
+    transition: .3s ease;
+    background-color: transparent;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.playicon {
+    position: absolute;
+    color: #3B236A;
+    font-size: 2rem;
+    cursor: pointer;
+    width: 20%;
+    height: 20%;
+    top: 40%;
+    left: 40%;
+    border-radius: 10%;
+    background: #fff;
+    padding: 5px 5px 5px 10px;
+}

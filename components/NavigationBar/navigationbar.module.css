@@ -1,0 +1,39 @@
+.navbar {
+    top: 0;
+    width: 100%;
+    height: 66px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.navbarhome {
+    top: 0;
+    width: 100%;
+    height: 66px;
+    position: relative;
+    text-transform: uppercase;
+    justify-content: flex-end;
+}
+
+.navbarCollapse {
+    margin: 0 -1rem;
+    z-index: 1;
+    background-color: #fff;
+}
+
+.navlink {
+    font-family: 'Poppins';
+    color: #000;
+}
+
+.navlink:hover {
+    color: #000;
+}
+
+.selected {
+    font-weight: 700;
+}
+
+.hover {
+    cursor: pointer;
+}

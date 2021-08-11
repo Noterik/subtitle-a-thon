@@ -1,0 +1,19 @@
+{
+    "form_username_error_validate": "This is not a valid username",
+    "form_username_error_required": "Username is required",
+    "form_username_error_maxLength": "Username cannot exceed 50 characters",
+    "form_username_error_server": "Username already in use",
+    "form_email_error_validate": "This is not a valid email address.",
+    "form_email_error_required": "Email is a required field.",
+    "form_email_error_server": "Email address already in use, do you want to [login](/login)?",
+    "form_password_error_validate": "Your password must consist of at least 8 characters, containing at least 1 number, lower case letter and upper case letter.",
+    "form_password_error_required": "Password is required",
+    "form_controlpassword_error_validate": "Passwords do not match each other",
+    "form_controlpassword_error_required": "Password is required",
+    "form_terms_error_required": "You have to agree to the terms & conditions",
+    "form_loginmessage_error_server": "Username or password incorrect",
+    "form_forgotpassword_error_server": "Username or email address not found",
+    "form_email_error_register": "Email address already registered, please await approval",
+    "form_nativelanguages_error_register": "Please add at least one native language",
+    "form_foreignlanguages_error_register": "Please add at least one foreign language"
+}
