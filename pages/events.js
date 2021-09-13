@@ -148,11 +148,11 @@ const Events = () => {
                                 <div className={`${styles.eventimagedatewrapper} justify-content-end`}>
                                     <div className={`${styles.evendateblock} ${styles.evendateblockright}`}>
                                         <span className={styles.eventdateblockdates}>
-                                            TBA
+                                            26 - 2
                                         </span>
                                         <hr className={styles.evendateblockline}/>
                                         <span className={styles.eventdateblockmonth}>
-                                            September
+                                            Sept. / Oct.
                                         </span>
                                     </div>
                                 </div>
@@ -167,13 +167,20 @@ const Events = () => {
                                 Join us for the Europeana XX: Subtitle-a-thon challenge in Amsterdam and share with us your language and subtitling skills to <span className="font-italic">Subtitle the Past, Translate for the Future.</span>
                             </p>
                             <p className={styles.text}>
-                                The Netherlands Institute for Sound and Vision (NISV) is pleased to invite you to a subtitle-a-thon focused on audiovisual heritage.
+                                The Netherlands Institute for Sound and Vision, the Leiden University Centre for Linguistics and The European Union National Institutes for Culture (EUNIC) Cluster Amsterdam are pleased to invite you to a subtitle-a-thon focused on audiovisual heritage.
                             </p>
                             <p className={styles.text}>
-                                The exact dates for this Subtitle-a-thon challenge will be announced soon.
+                                The kick-off of the subtitle-a-thon takes place during the celebration of the European Day of Languages on Sunday 26th September at 15:00 CEST. The event will start with a two hour introductory session, and will run online for six days with a closing session on Saturday, October 2nd at 17.00 CEST.
                             </p>
-                            <p className="pt-4">
-                                
+                            <p className={styles.text}>
+                                We are looking forward to seeing you! You will receive further information after registration.
+                            </p>
+                            <p className="d-flex justify-content-end">
+                                <a href="/event/amsterdam">
+                                    <div className={styles.button}>
+                                        Read more
+                                    </div>
+                                </a>
                             </p>
                         </div>
                         <div className="col-1"></div>

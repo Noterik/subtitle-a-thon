@@ -226,17 +226,17 @@ export default function Home() {
                   <div className={styles.gridcontentwrapper}>
                     <div className={styles.evendateblock}>
                       <span className={styles.eventdateblockdates}>
-                        TBA
+                        26 - 2
                       </span>
                       <hr className={styles.evendateblockline}/>
                       <span className={styles.eventdateblockmonth}>
-                        Sept.
+                        Sept.<br/>-<br/> Oct.
                       </span>
                     </div>
                     <div className={styles.eventdescriptionblock}>
                       <span className={styles.eventtitle}>Subtitle-a-thon Challenge Amsterdam</span>
                       <br/>
-                      <span className={styles.eventdescription}>TBA September 2021</span>
+                      <span className={styles.eventdescription}>26 September - 2 October 2021</span>
                       <br/>
                       <span className={styles.eventdescription}>Europeana XX: Subtitle-a-thon Challenge Amsterdam</span>
                       <a href="/events#amsterdam">
