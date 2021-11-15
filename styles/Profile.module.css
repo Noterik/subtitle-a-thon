@@ -55,6 +55,7 @@
     padding: 12px 20px;
     text-transform: uppercase;
     cursor: pointer;
+    height: 45px;
   }
 
   .navtabs {

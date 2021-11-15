@@ -9,7 +9,9 @@ const emailValidator = require("email-validator");
 import { useRouter } from "next/router"
 import Cookie from "../components/Cookie"
 import Select from "react-select";
-const languages = require('../i18n/lang.json');
+//const languages = require('../i18n/lang.json');
+const languages = require('../i18n/lang_rome.json');
+const languagesForeign = require('../i18n/lang_rome_foreign.json');
 
 const environment = process.env.NODE_ENV;
 const apiUrl = environment === "development" ? process.env.NEXT_PUBLIC_API_HOST_DEVELOPMENT : process.env.NEXT_PUBLIC_API_HOST;
@@ -107,6 +109,7 @@ const Registration = () => {
     }
 
     const locales = languages.locales;
+    const foreignLocales = languagesForeign.locales;
 
     return (
         <div className="main-container">
@@ -130,35 +133,217 @@ const Registration = () => {
                         <div className="col-1"></div>
                         <div className="col-5 pt-2">
                             <p className={styles.registrationtext}>
-                                Join us for the Europeana XX: Subtitle-a-thon Challenge Amsterdam and share with us your language and subtitling skills to <span className="font-italic">Subtitle the Past, Translate for the Future</span>.
+                                Join us for the Europeana XX: Subtitle-a-thon Challenge Rome and share with us your language and subtitling skills to <span className="font-italic">Subtitle the Past, Translate for the Future</span>.
                             </p>
                             <p className={styles.registrationtext}>
-                                The kick-off of the subtitle-a-thon takes place on Sunday 26th of September at 15.00 CEST with a two hour introductory session, and runs online for six days with a closing session on Saturday October 2nd at 17.00 CEST. Both of the live events will be held in English. Participation is free of charge.<br/>
+                                The kick-off of the subtitle-a-thon takes place on Saturday 23 of October at 11.00 CET with a one hour and a half introductory session, and runs online for six days with a closing session on Friday October 29 at 17.00 CET. Participation is free of charge.
+                            </p>
+                            <p className={styles.registrationtext}>
                                 Register now.
                             </p>
                             <p className={styles.registrationtext}>
-                                Didn't get a response? Check your spam folder for an e-mail from Europeana XX Subtitle-a-thon. No luck? Drop us a line at <a href="mailto:subtitles@euscreen.eu">subtitles@euscreen.eu</a> and we will get back to you as soon as possible. 
+                                Didn't get a response? Check your spam folder for an e-mail from Europeana XX Subtitle-a-thon. No luck? Drop us a line at  <a href="mailto:subtitleathon@cinecittaluce.it">subtitleathon@cinecittaluce.it</a> and we will get back to you as soon as possible. 
                             </p>
                             <p className={styles.registrationtext}>
-                                Don’t worry. Your personal data gathered by this form will be used by the EUscreen Foundation and the local hosts <span className="font-weight-bold">only within the context of the Europeana XX: Subtitle-a-thon event</span>.
+                                Don’t worry. Your personal data gathered by this form will be used by the local hosts <span className="font-weight-bold">only within the context of the Europeana XX: Subtitle-a-thon event</span>.
                             </p>
                             <hr/>
                             <p className={styles.registrationtext}>
-                                Doe mee met de Europeana XX: Subtitle-a-thon Amsterdam en deel je ondertitelingsvaardigheden voor ons motto: <span className="font-italic">Het Verleden Ondertitelen, Vertalen voor de Toekomst</span>.
+                                Unisciti a noi per l’Europeana XX: Subtitle-a-thon Challenge di Roma e condividi con noi le tue abilità linguistiche e di sottotitolazione per <span className="font-italic">Sottotitolare il passato, Tradurre per il futuro</span>.
                             </p>
                             <p className={styles.registrationtext}>
-                                De kick off van de subtitle-a-thon vind plaats op zondag 26 september 15:00 u CEST met een twee uur durend introductiesessie en loopt daarna voor 6 dagen tot de afsluitende sessie op zaterdag 2 oktober om 17:00 u CEST. Beide sessies zijn in het Engels. Deelname is gratis.<br/>
+                            Il lancio della subtitle-a-thon si svolgerà online, sabato 23 ottobre alle ore 11.00, con una sessione introduttiva di un'ora e mezza. La competizione online durerà sei giorni e si concluderà con una sessione finale, venerdì 29 ottobre alle ore 17.00. La partecipazione è gratuita.
                             </p>
                             <p className={styles.registrationtext}>
-                                Heb je nog geen bericht gekregen? Kijk in je spamfolder voor een email van Europeana XX Subtitle-a-thon. Niets gevonden? Mail ons dan via <a href="mailto:subtitles@euscreen.eu">subtitles@euscreen.eu</a> en we zullen zo snel mogelijk reageren. 
+                                Iscriviti ora!
                             </p>
                             <p className={styles.registrationtext}>
-                                Geen zorgen, je persoonlijke gegevens van deze registratie zullen door de EUscreen Foundation en de lokale partners <span className="font-weight-bold">enkel binnen de context van de Europeana XX: Subtitle-a-thon gebruikt worden</span>.
+                                Non hai ricevuto una email di conferma? Controlla nella cartella spam se hai un messaggio da Europeana XX Subtitle-a-thon. Ancora niente? Allora scrivici a <a href="mailto:subtitleathon@cinecittaluce.it">subtitleathon@cinecittaluce.it</a> e ti risponderemo al più presto.
+                            </p>
+                            <p className={styles.registrationtext}>
+                                Non preoccuparti, i dati personali raccolti in questo modulo saranno utilizzati dagli organizzatori <span className="font-weight-bold">solo nel contesto dell'evento Europeana XX: Subtitle-a-thon</span>.
                             </p>
                         </div>
                         <div className="col-1"></div>
                         <div className="col-4">
-                        {!successfulSubmit ? (
+                            <p className={`font-weight-bold ${styles.registrationtext}`}>
+                            Registration closed
+                            </p>
+                        </div>
+                        <div className="col-1"></div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    );
+}
+
+export default Registration
+
+/*
+
+{!successfulSubmit ? (
+                            <FormProvider {...methods}>
+                                <form noValidate onSubmit={handleSubmit(onSubmit)} className="registration-form pt-2">
+                                    <label className={`${styles.registerFieldName}`}>Full name</label>
+                                    <input 
+                                        className={styles.formInput}
+                                        id="fullname"
+                                        name="fullname"
+                                        type="text"
+                                        placeholder=""
+                                        required
+                                        ref={register({ 
+                                            required: true,
+                                            minLength: 1,
+                                            maxLength: 100,
+                                        })}
+                                        style={{ border: errors.fullname ? '1px solid red' : '' }}
+                                    />
+                                    <InputError field="fullname" messages={messages} />
+    
+                                    <label className={`${styles.registerFieldName} ${styles.registerFieldNameMargin}`}>Email</label>
+                                    <input 
+                                        className={styles.formInput}
+                                        id="email"
+                                        name="email"
+                                        type="email"
+                                        placeholder=""
+                                        required
+                                        ref={register({
+                                            required: true,
+                                            validate: emailValidator.validate,
+                                        })}
+                                        style={{ border: errors.email ? '1px solid red' : '' }}
+                                    />
+                                    <InputError field="email" messages={messages} />
+                                    
+                                    <label className={`${styles.registerFieldName} ${styles.registerFieldNameMargin}`}>Nationality</label>
+                                    <input 
+                                        className={styles.formInput}
+                                        id="nationality"
+                                        name="nationality"
+                                        type="text"
+                                        placeholder=""
+                                        required
+                                        ref={register({ 
+                                            required: true,
+                                            minLength: 1,
+                                            maxLength: 100,
+                                        })}
+                                        style={{ border: errors.nationality ? '1px solid red' : '' }}
+                                    />
+                                    <InputError field="nationality" messages={messages} />
+                                    
+                                    <label className={`${styles.registerFieldName} ${styles.registerFieldNameMargin}`}>Native language(s)</label>
+                                    <Controller
+                                        control={methods.control}
+                                        id="nativelanguages"
+                                        name="nativelanguages"
+                                        as={
+                                            <Select
+                                                name="nativelanguagesselect"  
+                                                className={styles.select}
+                                                classNamePrefix={styles.select} 
+                                                options={locales}
+                                                getOptionLabel={(option) => option.name}
+                                                getOptionValue ={(option) => option.iso}
+                                                placeholder="Pick one or more languages"
+                                                isMulti="true"
+                                                styles={customSelectStyle}
+                                                onChange={val => onChange(val.value)}
+                                            />
+                                        }
+                                    />
+                                    
+                                    <InputError field="nativelanguages" messages={messages} />
+
+                                    <label className={`${styles.registerFieldName} ${styles.registerFieldNameMargin}`}>Language(s) spoken fluently</label>
+                                    <Controller
+                                        control={methods.control}
+                                        id="foreignlanguages"
+                                        name="foreignlanguages"
+                                        placeholder="Pick one or more languages"
+                                        rules={{ required: true }}
+                                        register={register}
+                                        setValue={setValue}
+                                        as={
+                                            <Select
+                                                name="foreignlanguagesselect"  
+                                                className={styles.select}
+                                                classNamePrefix={styles.select} 
+                                                options={foreignLocales}
+                                                getOptionLabel={(option) => option.name}
+                                                getOptionValue ={(option) => option.iso}
+                                                isMulti="true"
+                                                styles={customSelectStyle}
+                                                onChange={val => onChange(val.value)}
+                                            />
+                                        }
+                                    />
+                                    <InputError field="foreignlanguages" messages={messages} />
+
+                                    <div className={`pt-4 ${styles.termwrapper}`}>
+                                        <label htmlFor="terms">
+                                            <input
+                                                className={styles.formCheckbox}
+                                                id="terms"
+                                                name="terms"
+                                                type="checkbox"
+                                                required
+                                                ref={register({
+                                                    required: true
+                                                })}
+                                            />
+                                            <span>
+                                                <a href="/terms-of-use" target="_blank" className={styles.link2}>
+                                                    I accept the Terms of Use
+                                                </a>
+                                            </span>
+                                        </label>    
+                                        <InputError field="terms" messages={messages} />
+                                    </div>
+                                    <button
+                                        type="submit"
+                                        className={styles.submitbutton}
+                                        disabled={formState.isSubmitting || !formState.isValid ||waitingForResponse}
+                                    >
+                                        Sign up        
+                                    </button>
+                                </form>
+                            </FormProvider> )
+                            : (
+                                <div className="registration-success pt-4">
+                                    <p>
+                                        <span className="font-weight-bold">All set!</span>
+                                    </p>
+                                    <p>
+                                        Confirmation of your registration is on its way to your inbox.
+                                    </p>
+                                    <p>
+                                        Within few days you’ll get a message from us confirming if you can join us in the Europeana XX: Subtitle-a-thon Challenge Rome.
+                                    </p>
+                                    <p>
+                                        Questions? We’re here to help: <a href="mailto:subtitleathon@cinecittaluce.it">subtitleathon@cinecittaluce.it</a>
+                                    </p>
+                                    <hr/>
+                                    <p>
+                                        <span className="font-weight-bold">Tutto a posto!</span>
+                                    </p>
+                                    <p>
+                                        Riceverai a breve la conferma della registrazione nella tua casella di posta.
+                                    </p>
+                                    <p>
+                                        Entro pochi giorni riceverai un messaggio da parte nostra che ti confermerà se sei tra i partecipanti selezionati per l'Europeana XX: Subtitle-a-thon Challenge Rome.
+                                    </p>
+                                    <p>
+                                        Domande? Scrivici pure a: <a href="mailto:subtitleathon@cinecittaluce.it">subtitleathon@cinecittaluce.it</a>
+                                    </p>
+                                </div> 
+                            )}
+
+
+{!successfulSubmit ? (
                             <FormProvider {...methods}>
                                 <form noValidate onSubmit={handleSubmit(onSubmit)} className="registration-form pt-2">
                                     <label className={`${styles.registerFieldName}`}>Full name</label>
@@ -307,26 +492,19 @@ const Registration = () => {
                                         <span className="font-weight-bold">Helemaal klaar!</span>
                                     </p>
                                     <p>
-                                        De bevestiging van je inschrijving komt naar je inbox.
+                                        Je krijgt de bevestiging van je inschrijving in je inbox.
                                     </p>
                                     <p>
-                                        Binnen 5 dagen ontvang je een bericht van ons waarin we bevestigen of je mee kunt doen aan de Europeana XX: Subtitle-a-thon Uitdaging Amsterdam.
+                                        Binnen 5 dagen ontvang je een bericht van ons waarin we bevestigen of je mee kunt doen aan de Europeana XX: Subtitle-a-thon Challenge Amsterdam.
                                     </p>
                                     <p>
-                                        Vragen? Wij zijn hier om te helpen: <a href="mailto:subtitles@euscreen.eu">subtitles@euscreen.eu</a>
+                                        Vragen? Wij helpen je graag: <a href="mailto:subtitles@euscreen.eu">subtitles@euscreen.eu</a>
                                     </p>
                                 </div> 
                             )}
-                        </div>
-                        <div className="col-1"></div>
-                    </div>
-                </section>
-            </main>
-        </div>
-    );
-}
 
-export default Registration
+*/
+
 
 /*
 

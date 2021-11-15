@@ -97,9 +97,9 @@ const AboutUs = () => {
                             <div className={styles.partnerwrapper}>
                                 <a href="https://cinecitta.com/" target="_blank" className={styles.link}>
                                     <div className={styles.partner}>
-                                        <img src="/partner/luce.png" alt="Istituto Luce-Cinecittà" className="mw-100" style={{objectFit: 'contain'}} width="100%" height="100%" /> 
+                                        <img src="/partner/luce.png" alt="Cinecittà" className="mw-100" style={{objectFit: 'contain'}} width="100%" height="100%" /> 
                                     </div>
-                                    <p className="font-weight-bold text-break pt-2">Istituto Luce-Cinecittà</p>
+                                    <p className="font-weight-bold text-break pt-2">Cinecittà</p>
                                 </a>
                             </div>
                             <div className={styles.partnerwrapper}>

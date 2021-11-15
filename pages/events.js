@@ -52,7 +52,7 @@ const Events = () => {
                                 <div className={styles.eventimagedatewrapper}>
                                     <div className={styles.evendateblock}>
                                         <span className={styles.eventdateblockdates}>
-                                            12-18
+                                            12 - 18
                                         </span>
                                         <hr className={styles.evendateblockline}/>
                                         <span className={styles.eventdateblockmonth}>
@@ -70,7 +70,7 @@ const Events = () => {
                                 <div className={`${styles.eventimagedatewrapper} justify-content-end`}>
                                     <div className={`${styles.evendateblock} ${styles.evendateblockright}`}>
                                         <span className={styles.eventdateblockdates}>
-                                            6-11
+                                            6 - 11
                                         </span>
                                         <hr className={styles.evendateblockline}/>
                                         <span className={styles.eventdateblockmonth}>
@@ -112,16 +112,20 @@ const Events = () => {
                             <a name="rome">Subtitle-a-thon Challenge Rome</a>  
                             </p>
                             <p className={styles.text}>
-                                Join us for the Europeana XX: Subtitle-a-thon challenge in Rome and share with us your language and subtitling skills to <span className="font-italic">Subtitle the Past, Translate for the Future.</span>
+                                Join us for the Europeana XX: Subtitle-a-thon Challenge Rome and share with us your language and subtitling skills to <span className="font-italic">Subtitle the Past, Translate for the Future.</span>
                             </p>
                             <p className={styles.text}>
-                                The Istituto Luce-Cinecittà (LUCE) and The European Union National Institutes for Culture (EUNIC) Cluster Rome are pleased to invite you to a subtitle-a-thon focused on audiovisual heritage.
+                                Cinecittà and The European Union National Institutes for Culture (EUNIC) Cluster Rome are pleased to invite you to a subtitle-a-thon focused on audiovisual heritage.
                             </p>
                             <p className={styles.text}>
-                                The exact dates for this Subtitle-a-thon challenge will be announced soon.
+                                The kick-off of the subtitle-a-thon takes place on Saturday, October 23 at 11.00 CEST with a one hour and a half introductory session, and will run online for seven days with a closing session on Friday, October 29 at 17.00 CEST.
                             </p>
-                            <p className="pt-4">
-                                
+                            <p className="d-flex justify-content-end">
+                                <a href="/event/rome">
+                                    <div className={styles.button}>
+                                        Read more
+                                    </div>
+                                </a>
                             </p>
                         </div>
                         <div className="col-1"></div>
@@ -130,11 +134,11 @@ const Events = () => {
                                 <div className={styles.eventimagedatewrapper}>
                                     <div className={styles.evendateblock}>
                                         <span className={styles.eventdateblockdates}>
-                                            TBA
+                                            23 - 29
                                         </span>
                                         <hr className={styles.evendateblockline}/>
                                         <span className={styles.eventdateblockmonth}>
-                                            September
+                                            October
                                         </span>
                                     </div>
                                 </div>

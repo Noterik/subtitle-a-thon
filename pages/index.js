@@ -94,7 +94,7 @@ export default function Home() {
               </p>
               <p className={styles.welcometext}>
                 The four online events are coordinated by four members of the project: the Deutsches Filminstitut & Filmmuseum - DFF (Germany),
-                The Istituto Luce Cinecittà (Italy), the National Film Archive - Audiovisual Institute - FINA (Poland) and, the Netherlands Institute for Sound and Vision - NISV (The Netherlands). 
+                Cinecittà (Italy), the National Film Archive - Audiovisual Institute - FINA (Poland) and, the Netherlands Institute for Sound and Vision - NISV (The Netherlands). 
                 During the events, people with different language skills work together toward a common goal: to create and add different subtitles to archival media fragments coming from various European collections that may be further shown in the Europeana XX editorials. 
                 During the events, participants will have the opportunity to use specialized technology to subtitle the content.
               </p>
@@ -201,17 +201,17 @@ export default function Home() {
                   <div className={styles.gridcontentwrapper}>
                     <div className={styles.evendateblock}>
                       <span className={styles.eventdateblockdates}>
-                        TBA
+                        23 - 29
                       </span>
                       <hr className={styles.evendateblockline}/>
                       <span className={styles.eventdateblockmonth}>
-                        Sept.
+                        Oct.
                       </span>
                     </div>
                     <div className={styles.eventdescriptionblock}>
                       <span className={styles.eventtitle}>Subtitle-a-thon Challenge Rome</span>
                       <br/>
-                      <span className={styles.eventdescription}>TBA September 2021</span>
+                      <span className={styles.eventdescription}>23 - 29 October 2021</span>
                       <br/>
                       <span className={styles.eventdescription}>Europeana XX: Subtitle-a-thon Challenge Rome</span>
                       <a href="/events#rome">

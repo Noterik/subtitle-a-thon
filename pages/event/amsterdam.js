@@ -335,18 +335,18 @@ const Amsterdam = () => {
                             <a name="warsaw">Subtitle-a-thon Challenge Amsterdam</a>  
                             </p>
                             <p className={styles.whitetext}>
-                                Doe mee met de <span className="font-italic">Europeana XX: Subtitle-a-thon</span>! Van vroege Nederlandse journaals tot clips over kunst en cultuur, probeer het audiovisuele erfgoed van Europa te ondertitelen in het Nederlands/Vlaams en Engels, en maak het toegankelijk voor anderen. Onze motto: <span className="font-italic">"Het Verleden Ondertitelen, Vertalen voor de Toekomst”</span>.
+                                Doe mee met de <span className="font-italic">Europeana XX: Subtitle-a-thon</span>! Van oude Nederlandse journaals tot clips over kunst en cultuur, probeer het audiovisuele erfgoed van Europa te ondertitelen in het Nederlands en Engels, en maak het toegankelijk voor anderen. Ons motto:<span className="font-italic">"Het verleden ondertitelen, vertalen voor de toekomst”</span>.
                             </p>
                             <p className={styles.whitetext}>
-                                Het Nederlands Instituut voor Beeld en Geluid nodigt alle taal- en film liefhebbers van harte uit om deel te nemen aan ons online evenement!
+                            Het Nederlands Instituut voor Beeld en Geluid nodigt alle taal- en filmliefhebbers van harte uit om deel te nemen aan ons online evenement!
                             </p>
                             <p className={styles.whitetext}>
-                                Subtitle-a-thon looptijd: september 26- october 2, 2021.<br/>
-                                Kick off event: zondag, 26 september van 15:00 u. tot 17:00 u. via Zoom.<br/>
-                                Wrap up event: zaterdag, 2 october om 17:00 u. via Zoom<br/>
+                                Duur Subtitle-a-thon: 26 september - 2 oktober 2021.<br/>
+                                Kick-offsessie: zondag 26 september van 15.00 tot 17.00 uur via Zoom.<br/>
+                                Afrondingssessie: zaterdag 2 oktober om 17.00 uur via Zoom<br/>
                             </p>
                             <p className={styles.whitetext}>
-                                We kijken er naar uit om je te zien! Na inschrijving ontvang je meer informatie.
+                                We kijken ernaar uit om je te zien! Na je inschrijving ontvang je meer informatie.
                             </p>
                             <p className="d-flex justify-content-end">
                                 <a href="/registration">
@@ -383,16 +383,16 @@ const Amsterdam = () => {
                         <div className="col-10 col-lg-5">
                             <h2 className={styles.eventheaderblack}>De uitdaging</h2>
                             <p>
-                            De deelnemers zullen korte clips ondertitelen die afkomstig zijn uit de archiefcollectie van het Nederlands Instituut voor Beeld en Geluid, en andere toonaangevende Europese audiovisuele archieven, waarvan de inhoud beschikbaar is op <a href="https://europeana.eu" target="_blank">Europeana.eu</a>.
+                                De deelnemers zullen korte clips ondertitelen die afkomstig zijn uit de archiefcollectie van het Nederlands Instituut voor Beeld en Geluid en andere toonaangevende Europese audiovisuele archieven, waarvan de inhoud beschikbaar is op <a href="https://europeana.eu" target="_blank">Europeana.eu</a>.
                             </p>
                             <p className="font-weight-bold">
                                 Wij nodigen jullie uit om:
                             </p>
                             <ul>
-                                <li>Maak ondertitels voor diverse korte audiovisuele clips, zoals (maar niet beperkt tot) korte documentaires, journaals en tv programma's over kunst en cultuur.</li>
-                                <li>Test een nieuwe tool en je taalvaardigheid in een vriendelijke en leuke omgeving.</li>
-                                <li>Word tegelijkertijd lid van de gemeenschap van taal en audiovisueel erfgoed liefhebbers.</li>
-                                <li>Win een prijs (ecomondo of bol.com tegoedbon) om een ​​van de beste Europeana XX-ondertitelaars te worden!</li>
+                                <li>ondertitels te maken voor diverse korte audiovisuele clips, zoals (maar niet beperkt tot) korte documentaires, journaals en tv-programma's over kunst en cultuur;</li>
+                                <li>een nieuwe tool en je taalvaardigheid in een vriendelijke en leuke omgeving te testen;</li>
+                                <li>tegelijkertijd lid te worden van de gemeenschap van taalfanaten en liefhebbers van audiovisueel erfgoed;</li>
+                                <li>een prijs te winnen (tegoedbon van <a href="https://www.ecomondo.nl/" target="_blank">ecomondo</a> of <a href="https://www.bol.com/" target="_blank">bol.com</a>) als een ​​van de beste Europeana XX-ondertitelaars!</li>
                             </ul>
                         </div>
                         <div className="col-1"></div>
@@ -401,30 +401,83 @@ const Amsterdam = () => {
 
                 <section className="container-fluid">
                     <div className="row pt-4">
-                        <div className="col-1"></div>
-                        <div className="col-10 col-lg-5">
-                            <h2 className={styles.eventheaderblack}>The awards</h2>
-                            <p>The winners of the Europeana XX Subtitle-a-thon Challenge Amsterdam will receive online gift prizes and all entrants will receive a participation certificate.</p>
-                            <p>Prizes will be awarded online by the organisers:</p>
-                            <ul>
-                                <li>1st prize - 75 Euro gift card to <a href="https://www.ecomondo.nl/" target="_blank">ecomondo</a></li>
-                                <li>2nd prize - 50 Euro gift card to <a href="https://www.ecomondo.nl/" target="_blank">ecomondo</a></li>
-                                <li>3rd prize - 25 Euro gift card to <a href="https://www.ecomondo.nl/" target="_blank">ecomondo</a></li>
-                            </ul>
+                        <div className={`col-12 col-lg-6 pt-5 pb-5 pl-5 pr-5 ${styles.purplebackground}`}>
+                            <p className={`${styles.eventheader}`}>
+                                Announcement of winners
+                            </p>
+                            <br/>
+                            <p className={styles.whitetext}>
+                                <span className="font-weight-bold">4 locations</span> (the Netherlands, Belgium, Germany & Scotland),<br/>
+                                <span className="font-weight-bold">36</span> new subtitles,<br/>
+                                <span className="font-weight-bold">12</span> active subtitlers,<br/>
+                                <span className="font-weight-bold">2</span> languages,<br/>
+                                <span className="font-weight-bold">59 565</span> characters<br/>
+                                and <span className="font-weight-bold">62</span> minutes of subtitles!!!<br/><br/>
+                                <span className="font-weight-bold">Here are the results of Europeana XX: Subtitle-a-thon Challenge Amsterdam!</span> 
+                            </p>
+                            <p className={styles.whitetext}>
+                                And here are <span className="font-weight-bold">the winners!</span><br/>
+                            </p>
+                            <p className={styles.whitetext}>
+                                1st prize - 75 Euro gift card to ecomondo.nl – <span className="font-weight-bold">Annemeike van Gaans</span>
+                            </p>
+                            <p className={styles.whitetext}>
+                                2nd prize - 50 Euro gift card to ecomondo.nl - <span className="font-weight-bold">Valerie Brentjes</span>
+                            </p>
+                            <p className={styles.whitetext}>
+                                3rd prize - 25 Euro gift card to ecomondo.nl - <span className="font-weight-bold">Imogen van den Oord</span>
+                            </p>    
+                            <div className={`mt-4 pt-3 mb-4 pb-4 ${styles.progressblock}`}>
+                                <p className={styles.leaderboardheader}>Leaderboard</p>
+                                <div className="row pb-2">
+                                            <div className={'col-1 col-lg-2'}></div>
+                                            <div className={`col-1 my-auto ${styles.leaderboardnumber}`}>
+                                                1
+                                            </div>
+                                            <div className={`col-1`}></div>
+                                            <div className={`col-8 col-lg-6 ${styles.leaderboardparticipant}`}>
+                                                Annemeike van Gaans
+                                            </div>
+                                            <div className={'col-1 col-lg-2'}></div>
+                                </div>
+                                <div className="row pb-2">
+                                            <div className={'col-1 col-lg-2'}></div>
+                                            <div className={`col-1 my-auto ${styles.leaderboardnumber}`}>
+                                                2
+                                            </div>
+                                            <div className={`col-1`}></div>
+                                            <div className={`col-8 col-lg-6 ${styles.leaderboardparticipant}`}>
+                                                Valerie Brentjes
+                                            </div>
+                                            <div className={'col-1 col-lg-2'}></div>
+                                </div>
+                                <div className="row pb-2">
+                                            <div className={'col-1 col-lg-2'}></div>
+                                            <div className={`col-1 my-auto ${styles.leaderboardnumber}`}>
+                                                3
+                                            </div>
+                                            <div className={`col-1`}></div>
+                                            <div className={`col-8 col-lg-6 ${styles.leaderboardparticipant}`}>
+                                                Imogen van den Oord
+                                            </div>
+                                            <div className={'col-1 col-lg-2'}></div>
+                                </div>
+                            </div>
+                            <p className={styles.whitetext}>
+                                The prizes were awarded by the Challenge organisers based on the amount of subtitled characters and quality of the subtitles. <span className="font-weight-bold">Congratulations!</span>
+                            </p>
+                            <p className={styles.whitetext}>
+                                All entrants will receive in their mailboxes a participation certificate.
+                            </p>
+                            <p className={styles.whitetext}>
+                                <span className="font-weight-bold">Thank you all for your participation</span> in the Europeana XX: Subtitle-a-thon Challenge Amsterdam!
+                            </p>    
                         </div>
-                        <div className='col-1 d-lg-none'></div>
-                        <div className='col-1 d-lg-none'></div>
-                        <div className="col-10 col-lg-5">
-                            <h2 className={styles.eventheaderblack}>De prijzen</h2>
-                            <p>De winnaars van de Europeana XX Subtitle-a-thon Uitdaging Amsterdam ontvangen online cadeau prijzen en alle deelnemers ontvangen een deelnamecertificaat.</p>
-                            <p>De organisatoren zullen online de prijzen toekennen:</p>
-                            <ul>
-                                <li>1e prijs - 75 Euro cadeau bon van <a href="https://www.ecomondo.nl/" target="_blank">ecomondo</a></li>
-                                <li>2e prijs - 50 Euro cadeau bon van <a href="https://www.ecomondo.nl/" target="_blank">ecomondo</a></li>
-                                <li>3e prijs - 25 Euro cadeau bon van <a href="https://www.ecomondo.nl/" target="_blank">ecomondo</a></li>
-                            </ul>
+                        <div className={`d-none d-lg-block col-lg-6 ${styles.purplebackground}`}> 
+                            <div className={styles.eventimagewinners}>
+
+                            </div>
                         </div>
-                        <div className="col-1"></div>
                     </div>
                 </section>
 
@@ -453,19 +506,19 @@ const Amsterdam = () => {
                         <div className='col-1 d-lg-none'></div>
                         <div className='col-1 d-lg-none'></div>
                         <div className="col-10 col-lg-5">
-                            <h2 className={styles.eventheaderblack}>Wie kan deelnemen?</h2>
+                            <h2 className={styles.eventheaderblack}>Wie kunnen er deelnemen?</h2>
                             <p>
-                                We nodigen vertaald enthousiastelingen en gevorderde taalstudenten (C1 en hoger) uit die zich graag willen onderdompelen in de rijkdom van het Europese audiovisuele erfgoed om het breed te begrijpen door het te verrijken met ondertitels.
+                            We nodigen mensen die van vertalen houden en gevorderde taalstudenten (C1 en hoger) uit die zich graag willen onderdompelen in de rijkdom van het Europese audiovisuele erfgoed om dit voor een breed publiek begrijpelijk te maken door het te voorzien van ondertitels.
                             </p>
                             <p className="font-weight-bold">
                                 Dus als je:
                             </p>
                             <ul>
-                                <li>Nederlands/Vlaams en Engels spreekt</li>
-                                <li>spelling, interpunctie en grammatica nauwkeurig gebruikt</li>
-                                <li>de dialoog gevoelig in de gewenste taal vertaald</li>
-                                <li>een goed gevoel voor tekst en timing hebt</li>
-                                <li>in staat bent om minimaal 4 uur per week aan de taak te besteden</li>
+                                <li>Nederlands en Engels spreekt;</li>
+                                <li>de regels voor spelling, interpunctie en grammatica nauwkeurig toepast;</li>
+                                <li>de dialoog met gevoel in de gewenste taal vertaalt;</li>
+                                <li>een goed gevoel voor tekst en timing hebt;</li>
+                                <li>in staat bent om minimaal 4 uur per week aan de opdracht te besteden;</li>
                             </ul>
                             <p>
                                 ...dan zijn wij op zoek naar jou!
@@ -481,13 +534,13 @@ const Amsterdam = () => {
                         <div className="col-10 col-lg-5">
                             <h2 className={styles.eventheaderblack}>How can you participate?</h2>
                             <p>
-                                To join you need to submit the <a href="/registration">registration form</a> no later than <span className="font-weight-bold">Thursday, September 23, 2021</span>. Registration will be accepted on a first come first served basis as availability is limited.
+                                To join you need to submit the <a href="/registration">registration form</a> no later than <span className="font-weight-bold">Saturday, September 25, 2021</span>. Registration will be accepted on a first come first served basis as availability is limited.
                             </p>
                             <p className="font-weight-bold">
                                 IMPORTANT DATES:
                             </p>
                             <p>
-                                September 6 - September 23: Registration open, (participation will be confirmed within 5 days)
+                                September 6 - September 25: Registration open, (participation will be confirmed within 5 days)
                             </p>
                             <p>
                                 September 26 -  October 2: Subtitle-a-thon
@@ -508,30 +561,30 @@ const Amsterdam = () => {
                         <div className='col-1 d-lg-none'></div>
                         <div className='col-1 d-lg-none'></div>
                         <div className="col-10 col-lg-5">
-                            <h2 className={styles.eventheaderblack}>Hoe kunt u deelnemen?</h2>
+                            <h2 className={styles.eventheaderblack}>Hoe kun je deelnemen?</h2>
                             <p>
-                                Om deel te nemen, moet je het <a href="/registration">registratieformulier</a> uiterlijk <span className="font-weight-bold">donderdag 23 september 2021</span> indienen. Registratie wordt geaccepteerd op basis van wie het eerst komt,, aangezien de beschikbaarheid beperkt is.
+                                Om deel te nemen, moet je het <a href="/registration">inschrijfformulier</a> uiterlijk <span className="font-weight-bold">zaterdag 25 september 2021</span> indienen. Gezien de beperkte beschikbaarheid geldt bij de inschrijvingen: wie het eerst komt, die het eerst maalt.
                             </p>
                             <p className="font-weight-bold">
                                 BELANGRIJKE DATA:
                             </p>
                             <p>
-                                6 september  - 23 september:  Inschrijving open (deelname wordt binnen 5 dagen bevestigd)
+                                6 september - 25 september: inschrijving open (deelname wordt binnen 5 dagen bevestigd)
                             </p>
                             <p>
-                                26 september  - 2 oktober: Subtitle-a-thon
+                                26 september - 2 oktober: Subtitle-a-thon
                             </p>
                             <p>
-                                26 september 15:00-17:00 CEST: Kick off
+                                26 september 15.00-17.00 CET: kick-off
                             </p>
                             <p>
-                                2 oktober 17:00-18:00 CEST: Wrap up/afronding
+                                2 oktober 17.00-18.00 CET: afronding
                             </p>
                             <p>
-                                14 oktober: Bekendmaking van de winnaars (op de subtitle-a-thon website)
+                                14 oktober: bekendmaking van de winnaars (op de website van de Subtitle-a-thon)
                             </p>
                             <p>
-                                De openings- en sluitings sessies worden in het Engels gehouden.
+                                De openings- en slotsessie worden in het Engels gehouden.
                             </p>
                         </div>
                         <div className="col-1"></div>
@@ -553,12 +606,12 @@ const Amsterdam = () => {
                         <div className='col-1 d-lg-none'></div>
                         <div className='col-1 d-lg-none'></div>
                         <div className="col-10 col-lg-5">
-                            <h2 className={styles.eventheaderblack}>Over de organisatoren</h2>
+                            <h2 className={styles.eventheaderblack}>Over de organisatoren </h2>
                             <p>
-                                <span className={styles.underline}>Europeana XX. A Century of Change is een project</span>, dat medegefinanceerd is door de Connecting Europe Facility Programme van de Europese Unie.
+                                <span className={styles.underline}>Europeana XX. A Century of Change is een project</span> dat medegefinancierd is door de Connecting Europe Facility van de Europese Unie.
                             </p>
                             <p>
-                                De Europeana XX Subtitle-a-thon Uitdaging Amsterdam is een samenwerking tussen het project, georganiseerd door een van de projectpartners - het Nederlands Instituut voor Beeld en Geluid.
+                                De Europeana XX Subtitle-a-thon Challenge Amsterdam is een samenwerking tussen de projectpartners en wordt georganiseerd door een van de projectpartners - het Nederlands Instituut voor Beeld en Geluid.
                             </p>
                         </div>
                         <div className="col-1"></div>

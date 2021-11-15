@@ -19,7 +19,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 const user = <FontAwesomeIcon icon={faUser} />;
 
-const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+const months = ['Jan.', 'Feb.', 'March', 'April', 'May', 'June', 'July', 'August', 'Sept.', 'Oct.', 'Nov.', 'Dec.'];
 
 const environment = process.env.NODE_ENV;
 const apiUrl = environment === "development" ? process.env.NEXT_PUBLIC_API_HOST_DEVELOPMENT : process.env.NEXT_PUBLIC_API_HOST;
@@ -71,6 +71,7 @@ const EventList = ({ events }) => {
                                 <hr className={styles.evendateblockline}/>
                                 <span className={styles.eventdateblockmonth}>
                                     {months[new Date(item.start_date).getMonth()]}
+                                    {months[new Date(item.start_date).getMonth()] != months[new Date(item.end_date).getMonth()] ? " - "+ months[new Date(item.end_date).getMonth()] : ""} 
                                 </span>
                                 </div>
                                 <div className={styles.eventdescriptionblock}>
@@ -539,6 +540,33 @@ const AssignedList = ({ assignedvideos }) => {
                             }).id} item={i} />
                             
                         )}
+                        {i.review_done == "1" ? (
+                            <>
+                            <div className="row">
+                                <div className="col-6">
+                                    <span className="font-italic">Quality:</span> {i.review_quality}
+                                </div>
+                                <div className="col-6">
+                                    <span className="font-italic">Approp.:</span> {i.review_appropriate}
+                                </div>
+                            </div>
+                            <div className="row">
+                                <div className="col-6">
+                                    <span className="font-italic">Flow:</span> {i.review_flow}
+                                </div>
+                                <div className="col-6">
+                                    <span className="font-italic">Grammar:</span> {i.review_grammatical}
+                                </div>
+                            </div>
+                            <div className="row">
+                                <div className="col-12">
+                                    <span className="font-italic">Comments:</span> {i.review_comments}
+                                </div>
+                            </div>
+                            </>
+                        ) : (
+                            null
+                        )}
                         </div>
                     </div>
                     </div>
@@ -623,8 +651,8 @@ const getMyVideos = (setMyVideos, setWaitingForVideos) => {
     });
 }
 
-const getRegistrations = (setRegistrations, setWaitingForRegistrations) => {
-    fetch(apiUrl+"/admin/registrations",
+const getRegistrations = (setRegistrations, setWaitingForRegistrations, adminEvent) => {
+    fetch(apiUrl+"/admin/registrations/"+adminEvent,
     {
         method: "GET",
         credentials: "include",
@@ -637,8 +665,8 @@ const getRegistrations = (setRegistrations, setWaitingForRegistrations) => {
     });
 }
 
-const getEventDetails = (setEuropeanaSetId, setEventId, setEventLanguages, setWaitingForEventData) => {
-    fetch(apiUrl+"/admin/eventdetails",
+const getEventDetails = (setEuropeanaSetId, setEventId, setEventLanguages, setWaitingForEventData, adminEvent) => {
+    fetch(apiUrl+"/admin/eventdetails/"+adminEvent,
     {
         method: "GET",
         credentials: "include",
@@ -653,8 +681,8 @@ const getEventDetails = (setEuropeanaSetId, setEventId, setEventLanguages, setWa
     });
 }
 
-const getSubmittedVideos = (setSubmittedVideos, setWaitingForSubmittedVideos) => {
-    fetch(apiUrl+"/admin/getsubmittedvideos",
+const getSubmittedVideos = (setSubmittedVideos, setWaitingForSubmittedVideos, adminEvent) => {
+    fetch(apiUrl+"/admin/getsubmittedvideos/"+adminEvent,
     {
         method: "GET",
         credentials: "include",
@@ -893,6 +921,7 @@ const Profile = () => {
     const [ registrations, setRegistrations ] = useState([]);
     const router = useRouter();
     const [isAdmin, setIsAdmin] = useState(false);
+    const [adminEvent, setAdminEvent] = useState("");
     const [isReviewer, setIsReviewer] = useState(false);
     const [tabKey, setTabKey] = useState('events');
     const [waitingForEventData, setWaitingForEventData] = useState(true);
@@ -944,26 +973,32 @@ const Profile = () => {
     useEffect(() => {      
         async function fetchData() {
             //check if user is logged in
-            const user = Cookie.getCookie("user");
-            //no valid user
-            if (user === null) {
-                router.push("/login");
-            } else {
-                setUsername(user.username);
-                setEmail(user.email);
-                if (user.admin && user.admin === true) {
-                    setIsAdmin(true);
-                    getRegistrations(setRegistrations, setWaitingForRegistrations);
-                    getEventDetails(setEuropeanaSetId, setEventId, setEventLanguages, setWaitingForEventData);
-                    getSubmittedVideos(setSubmittedVideos, setWaitingForSubmittedVideos);
+            setTimeout(function (){
+                const user = Cookie.getCookie("user");
+                //no valid user
+                if (user === null) {
+                    router.push("/login");
+                } else {
+                    setUsername(user.username);
+                    setEmail(user.email);
+                    if (user.admin && user.admin === true) {
+                        setIsAdmin(true);
+                        if (user.admin_event) {
+                            setAdminEvent(user.admin_event);
+                        }
+                        getRegistrations(setRegistrations, setWaitingForRegistrations, user.admin_event);
+                        getEventDetails(setEuropeanaSetId, setEventId, setEventLanguages, setWaitingForEventData, user.admin_event);
+                        getSubmittedVideos(setSubmittedVideos, setWaitingForSubmittedVideos,user.admin_event);
+                    }
+                    if (user.reviewer && user.reviewer === true) {
+                        setIsReviewer(true);
+                        getAssignedVideos(setAssignedVideos, setWaitingForAssignedVideos);
+                    }
+                    getJoinedEvents(setEvents, setWaitingForContent);
+                    getMyVideos(setMyVideos, setWaitingForVideos);
                 }
-                if (user.reviewer && user.reviewer === true) {
-                    setIsReviewer(true);
-                    getAssignedVideos(setAssignedVideos, setWaitingForAssignedVideos);
-                }
-                getJoinedEvents(setEvents, setWaitingForContent);
-                getMyVideos(setMyVideos, setWaitingForVideos);
-            }
+              }, 200);
+            
         }
         fetchData();
     }, []);

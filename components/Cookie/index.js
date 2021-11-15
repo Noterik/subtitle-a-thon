@@ -1,13 +1,17 @@
 export default class Cookie {
     static getCookie = (name) => {
         let value = null;
+        console.log("getting cookie with name "+name);
         const cookies = document.cookie.split("; ");
+        console.log("all cookies");
+        console.log(cookies);
         cookies.map((v) => {
             let [key, val] = v.split("=");
             if (key === "subtitleathon_"+name) {
                 value = JSON.parse(val);
             }
         })
+        console.log("returning ",value);
         return value;
     }
 

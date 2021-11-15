@@ -400,7 +400,7 @@ const Frankfurt = () => {
                 </section>
 
                 <section className="container-fluid">
-                <div className="row pt-4">
+                    <div className="row pt-4">
                         <div className={`col-12 col-lg-6 pt-5 pb-5 pl-5 pr-5 ${styles.purplebackground}`}>
                             <p className={`${styles.eventheader}`}>
                                 Announcement of winners
@@ -555,9 +555,9 @@ const Frankfurt = () => {
 
                             </div>
                         </div>
-                </div>
-                <div className="row">
-                    <div className={`d-none d-lg-block col-lg-6 ${styles.purplebackground}`}> 
+                    </div>
+                    <div className="row">
+                        <div className={`d-none d-lg-block col-lg-6 ${styles.purplebackground}`}> 
                             <div className={styles.eventimagewinners}>
 
                             </div>

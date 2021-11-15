@@ -20,11 +20,11 @@ const TermsOfUse = () => {
                     <h2 className={styles.header}>Terms of Use</h2>
                     <p className={`pt-4 ${styles.text}`}>
                         The Subtitle-a-thon.eu website is a service product of the EUscreen Foundation acting on behalf of the partners of the Europeana XX: Century of Change project, 
-                        especially the four local hosts of the Europeana XX: Subtitle-a-thon Challenges - Deutsches Filminstitut & Filmmuseum - DFF (Germany), The Istituto Luce Cinecittà - LUCE (Italy),
+                        especially the four local hosts of the Europeana XX: Subtitle-a-thon Challenges - Deutsches Filminstitut & Filmmuseum - DFF (Germany), Cinecittà (Italy),
                          the National Film Archive - Audiovisual Institute - FINA (Poland) and, the Netherlands Institute for Sound and Vision - NISV (The Netherlands). 
                     </p>
                     <p className={styles.text}>
-                        Europeana XX: Subtitle-a-thon Challenges are four online events held between June and september 2021.
+                        Europeana XX: Subtitle-a-thon Challenges are four online events held between June and October 2021.
                     </p>
                     <p className={styles.text}>
                         These terms, together with the Terms of User Contributions, establish the conditions that users accept when contributing content to the Subtitle-a-thon website, EUscreen.eu and Europeana.eu. Under these terms: 
