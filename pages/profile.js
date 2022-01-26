@@ -58,7 +58,7 @@ const logOut = () => {
 
 const EventList = ({ events }) => {
     return (
-        <div className={styles.gridwrapper}>
+        <div className={`${styles.gridwrapper} row w-100 d-flex`}>
             {events && events.map((item, key) => {
                 return (
                     <a key={key} href={`/event/${item.pagename}`}>
@@ -187,45 +187,46 @@ const SubmittedList = ({ submittedvideos }) => {
     const [waitingForReviewers, setWaitingForReviewers] = useState(true);
     const [reviewers, setReviewers] = useState([]);
 
+    useEffect(() => {
+        if (submittedvideos.length > 0) {
+            async function fetchData() {
+                fetch(apiUrl+"/user/list/"+submittedvideos[0].eventid,
+                {
+                    method: "GET",
+                    credentials: "include",
+                }).then(response => response.json())
+                .then(response => {
+                    if (!response.error) {                  
+                        setEventCollection(response);
+                    } 
+                    setWaitingForEventCollection(false);
+                });
+            }
+            fetchData();
+        }
+    }, []);
+    useEffect(() => {
+        async function fetchData() {
+            fetch(apiUrl+"/admin/getreviewers",
+            {
+                method: "GET",
+                credentials: "include",
+            }).then(response => response.json())
+            .then(response => {
+                if (!response.error) {                  
+                    setReviewers(response.results);
+                } 
+                setWaitingForReviewers(false);
+            });
+        }
+        fetchData();
+    }, []);
+
+
     if (submittedvideos.length > 0) {
         const eventid = submittedvideos[0].eventid;
 
-        useEffect(() => {
-            async function fetchData() {
-                fetch(apiUrl+"/user/list/"+eventid,
-                {
-                    method: "GET",
-                    credentials: "include",
-                }).then(response => response.json())
-                .then(response => {
-                    if (response.error) {                  
-                        setWaitingForEventCollection(false);
-                    } else {
-                        setEventCollection(response);
-                        setWaitingForEventCollection(false);
-                    } 
-                });
-            }
-            fetchData();
-        }, []);
-        useEffect(() => {
-            async function fetchData() {
-                fetch(apiUrl+"/admin/getreviewers",
-                {
-                    method: "GET",
-                    credentials: "include",
-                }).then(response => response.json())
-                .then(response => {
-                    if (response.error) {                  
-                        setWaitingForReviewers(false);
-                    } else {
-                        setReviewers(response.results);
-                        setWaitingForReviewers(false);
-                    } 
-                });
-            }
-            fetchData();
-        }, []);
+        
     } 
 
     const onClick = (embedid) => {       
@@ -457,22 +458,23 @@ const AssignedList = ({ assignedvideos }) => {
     const [assignedCollection, setAssignedCollection] = useState([]);
 
     if (assignedvideos.length > 0) {
-        const eventid = assignedvideos[0].eventid;
+        const uniqueEventIds = [...new Set(assignedvideos.map(item => item.eventid))];
 
         useEffect(() => {
             async function fetchData() {
-                fetch(apiUrl+"/user/list/"+eventid,
+                fetch(apiUrl+"/user/list/"+uniqueEventIds,
                 {
                     method: "GET",
                     credentials: "include",
                 }).then(response => response.json())
                 .then(response => {
-                    if (response.error) {                  
+                    if (response.error) {     
                         setWaitingForAssignedCollection(false);
+                        //TODO: handle error
                     } else {
                         setAssignedCollection(response);
                         setWaitingForAssignedCollection(false);
-                    } 
+                    }
                 });
             }
             fetchData();
@@ -644,10 +646,14 @@ const getMyVideos = (setMyVideos, setWaitingForVideos) => {
         credentials: "include",
     }).then(response => response.json())
     .then(response => {
-        if (!response.error && response.results) {
-            setMyVideos(response.results);
-            setWaitingForVideos(false);
+        if (!response.error) {
+            if (response.results) {
+                setMyVideos(response.results);
+            }
+        } else {
+            //TODO: handle error
         }
+        setWaitingForVideos(false);
     });
 }
 
@@ -658,9 +664,13 @@ const getRegistrations = (setRegistrations, setWaitingForRegistrations, adminEve
         credentials: "include",
     }).then(response => response.json())
     .then(response => {
-        if (!response.error && response.results) {
-            setRegistrations(response.results);
-            setWaitingForRegistrations(false);
+        setWaitingForRegistrations(false);
+        if (!response.error) { 
+            if (response.results) {
+                setRegistrations(response.results);
+            }
+        } else {
+            //TODO: handle error
         }
     });
 }
@@ -688,10 +698,14 @@ const getSubmittedVideos = (setSubmittedVideos, setWaitingForSubmittedVideos, ad
         credentials: "include",
     }).then(response => response.json())
     .then(response => {
-        if (!response.error && response.results) {
-            setSubmittedVideos(response.results);
-            setWaitingForSubmittedVideos(false);
+        if (!response.error) {
+            if (response.results) {
+                setSubmittedVideos(response.results);
+            }
+        } else {
+            //TODO: display error
         }
+        setWaitingForSubmittedVideos(false);
     });
 }
 
@@ -704,8 +718,8 @@ const getAssignedVideos = (setAssignedVideos, setWaitingForAssignedVideos) => {
     .then(response => {
         if (!response.error && response.results) {
             setAssignedVideos(response.results);
-            setWaitingForAssignedVideos(false);
         }
+        setWaitingForAssignedVideos(false);
     });
 }
 
@@ -764,15 +778,15 @@ const getItems = ( events, setCollection, setWaitingForCollection ) => {
 
     useEffect(() => {
         async function fetchEventsData() {
+            if (eventsDone != events.length) {
+            
             fetch(apiUrl+"/user/list/"+events[eventsDone],
             {
                 method: "GET",
                 credentials: "include",
             }).then(response => response.json())
             .then(response => {
-                if (response.error) {                  
-
-                } else {
+                if (!response.error) {                  
                     //check if we need to merge the items
                     if (tmpCollection === "") {
                         setTempCollection(response);
@@ -789,9 +803,9 @@ const getItems = ( events, setCollection, setWaitingForCollection ) => {
                     setEventsDone(eventsDone+1);
 
                     //the last request should signal this is done
-                    if (eventsDone == events.length -1) {
+                    if (eventsDone == events.length - 1) {
                         if (events.length == 1) {
-                               setCollection(response);
+                            setCollection(response);
                         } else {
                             setCollection(tmpCollection);
                         }
@@ -799,13 +813,12 @@ const getItems = ( events, setCollection, setWaitingForCollection ) => {
                     } 
                 } 
             });
+            }
         }
         fetchEventsData();
     }, [eventsDone]);
 }
 
-
- 
 const ItemList = ({ myVideos }) => {
     const [waitingForCollection, setWaitingForCollection] = useState(true);
     const [collection, setCollection] = useState("");
