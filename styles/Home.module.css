@@ -124,6 +124,10 @@
   background-image: url('/event-beach.jpg');
 }
 
+.eventimageboys {
+  background-image: url('/awards.jpg');
+}
+
 .griditemfindout {
   background: none #3B236A;
   height: 255px;

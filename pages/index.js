@@ -247,6 +247,31 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
+                <div className={`${styles.griditem} ${styles.eventimageboys}`}>
+                  <div className={styles.gridcontentwrapper}>
+                    <div className={styles.evendateblock}>
+                      <span className={styles.eventdateblockdates}>
+                        14 - 18
+                      </span>
+                      <hr className={styles.evendateblockline}/>
+                      <span className={styles.eventdateblockmonth}>
+                        Mar.
+                      </span>
+                    </div>
+                    <div className={styles.eventdescriptionblock}>
+                      <span className={styles.eventtitle}>Subtitle-a-thon Challenge Caserta</span>
+                      <br/>
+                      <span className={styles.eventdescription}>14 - 18 March</span>
+                      <br/>
+                      <span className={styles.eventdescription}>Europeana Subtitled: Subtitle-a-thon Challenge Caserta</span>
+                      <a href="/events#caserta">
+                        <div className={styles.eventreadmore}>
+                          Read more
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
                 <div className={styles.griditemfindout}>
                     Find all our events &nbsp;<a href="/events" className="font-weight-bold text-white"><u>right here</u></a>   
                 </div>

@@ -189,6 +189,47 @@ const Events = () => {
                         </div>
                         <div className="col-1"></div>
                     </div>
+
+                    <div className={`row ${styles.eventrowbackground}`}>
+                        <div className="col-1"></div>
+                        <div className="col-10 col-lg-4 pt-5">
+                            <p className={styles.eventheader}>
+                            <a name="caserta">Subtitle-a-thon Challenge Caserta</a>  
+                            </p>
+                            <p className={styles.text}>
+                                Join us for the Subtitle-a-thon Challenge of Liceo Manzoni, Caserta and share with us your language and subtitling skills to <span className="font-italic">"Subtitle the Past, Translate for the Future"</span>.
+                            </p>
+                            <p className={styles.text}>
+                                Archivio Luce - Cinecittà and Liceo Manzoni Caserta are pleased to invite you to a subtitle-a-thon focused on audiovisual heritage.
+                            </p>
+                            <p className={styles.text}>
+                                The presentation of the subtitle-a-thon takes place on Friday, March 4 at 11.00 CEST with a one hour and a half introductory session, and will run online for four days from the 14th to the 18th of March with a final  award session on Tuesday, April 12.
+                            </p>
+                            <p className="d-flex justify-content-end">
+                                <a href="/event/caserta">
+                                    <div className={styles.button}>
+                                        Read more
+                                    </div>
+                                </a>
+                            </p>
+                        </div>
+                        <div className="col-1"></div>
+                        <div className="d-none d-lg-block col-lg-6"> 
+                            <div className={`${styles.eventimageodd} ${styles.eventimageboys}`}>
+                                <div className={styles.eventimagedatewrapper}>
+                                    <div className={styles.evendateblock}>
+                                        <span className={styles.eventdateblockdates}>
+                                            14 - 18
+                                        </span>
+                                        <hr className={styles.evendateblockline}/>
+                                        <span className={styles.eventdateblockmonth}>
+                                            March
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </section>
             </main>
         </div>

@@ -103,13 +103,16 @@ const RegistrationList = ({ registrations }) => {
                             <div className={`col-4 ${styles.email}`}>
                                 Email: {item.email}
                             </div>
-                            <div className={`col-4 ${styles.nationality}`}>
-                                Nationality: {item.nationality}
-                            </div>
+                            <div className={`col-4 ${styles.email}`}>
+                                Email2: {item.email2}@liceomanzonicaserta.it
+                            </div>    
                         </div>
                         <div className="row">
                             <div className="col-4">
                                 User name: {item.username}
+                            </div>
+                            <div className={`col-4 ${styles.nationality}`}>
+                                Nationality: {item.nationality}
                             </div>
                             <div className={`col-4 ${styles.languages}`}>
                                 Native languages:&nbsp;
@@ -121,7 +124,9 @@ const RegistrationList = ({ registrations }) => {
                                     )
                                 })}
                             </div>                        
-                            <div className={`col-4 ${styles.languages}`}>
+                        </div>
+                        <div className="row">
+                        <div className={`col-4 ${styles.languages}`}>
                                 Foreign languages:&nbsp;
                                 {item.foreign_languages.split(",").map((i, k) => {
                                     return (
@@ -131,31 +136,28 @@ const RegistrationList = ({ registrations }) => {
                                     )
                                 })}
                             </div>
-                        </div>
-                        <div className="row">
                             <div className="col-4">
                                 Location: {item.location}
                             </div>
                             <div className="col-4">
                                 Gender: {item.gender}
                             </div>
+                        </div>
+                        <div className="row">
                             <div className="col-4">
                                 Age: {item.age}
                             </div>
-                        </div>
-                        <div className="row">
                             <div className="col-4">
                                 Professional Background: {item.professional_background}
                             </div>
                             <div className="col-4">
                             Europeana known: {item.europeana_known}
                             </div>
+                        </div>
+                        <div className="row">
                             <div className="col-4">
                                 Email updates: {item.email_updates}
                             </div>
-                        </div>
-                        <div className="row">
-                            
                             <div className={`col-2 ${styles.approve}`}>
                                 <button id={`registration_approve_${item.registrationid}`} onClick={() => ApproveRegistration(item.registrationid)}>Accept {item.accepted == 1 ? "✔️" : null}</button>
                             </div>
